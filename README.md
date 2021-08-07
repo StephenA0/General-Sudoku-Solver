@@ -15,4 +15,4 @@ change as the board is filled in) until it is empty, at which point the board is
 *There are many ways to "combine" these values into one representative number -- a crude approach would be simple summing. However, the set with the least number
 of elements is the most constraining, and should be weighted more heavily in the representation. For a 9 x 9 board, this program constructs a 3-digit number for
 each cell, where the first digit is the length of the smallest set, the second the length of the second smallest, and the third the length of the largest. For a
-general n^2 x n^2 board, the same idea is applied -- an n-digit, base (n^2 + 1) number is constructed based upon the lengths of the sets.
+general n^2 x n^2 board, the same idea is applied -- an n-digit, base (n^2 + 1) number is constructed for each cell based upon the lengths of its associated sets.
