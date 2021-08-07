@@ -9,5 +9,5 @@ and the run-time of the solving algorithm. Example boards exist in example_board
 The casework is optimized in the following way: the "sets" dictionary maps each blank cell to three sets: the cell's row, column, and square. These three sets each
 contain the values which remain to be filled into the board in that given row, column, or square. For example, if row 4 already has 3, 4, 6, and 8 written into it,
 then rows[4] = {1, 2, 5, 7, 9} for a 9 x 9 board. The smaller the set, the more constrained the casework on a cell. Thus, we aim to casework on the cell with the
-minimal row, col, and square set size, and we use the min-heap to repeatedly find that cell. The min-heap is then repeatedly updated (because the values change as
+minimum row, col, and square set size, and we use the min-heap to repeatedly find that cell. The min-heap is then repeatedly updated (because the values change as
 more cells are filled in) until it is empty, at which point all cells have been properly filled in.
