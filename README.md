@@ -12,4 +12,7 @@ then rows[4] = {1, 2, 5, 7, 9} for a 9 x 9 board. The smaller the set, the more 
 least combined* row, col, and square set size, and we use the min-heap to repeatedly find that cell. The min-heap is then repeatedly updated (because the values
 change as the board is filled in) until it is empty, at which point the board is complete.
 
-*This combination 
+*There are many ways to "combine" these values into one representative number -- a crude approach would be simple summing. However, the set with the least number
+of elements is the most constraining, and should be weighted more heavily in the representation. For a 9 x 9 board, this program constructs a 3-digit number for
+each cell, where the first digit is the length of the smallest set, the second the length of the second smallest, and the last the length of the largest. For a
+general n^2 x n^2 board, the same is done -- an n-digit, base (n^2 + 1) number is constructed based upon the lengths of the sets.
